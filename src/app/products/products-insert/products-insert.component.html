@@ -1,0 +1,44 @@
+<h2>Product Form</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="product" class="form-label">product</label>
+    <input
+      type="text"
+      class="form-control"
+      id="product"
+      formControlName="product"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="cost" class="form-label">cost</label>
+    <input
+      type="text"
+      class="form-control"
+      id="cost"
+      formControlName="cost"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">description</label>
+    <input
+      type="text"
+      class="form-control"
+      id="description"
+      formControlName="description"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="quantity" class="form-label">quantity</label>
+    <input
+      type="text"
+      class="form-control"
+      id="quantity"
+      formControlName="quantity"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-success" [disabled]="!form.valid">
+    Submit
+  </button>
+</form>
+
